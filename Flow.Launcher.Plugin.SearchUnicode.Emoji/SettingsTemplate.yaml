@@ -1,0 +1,18 @@
+body:
+  - type: input
+    attributes:
+      name: gender
+      label: Gender
+      description: >-
+        Comma separated values to specify genders emoji. Possible values: all,
+        p, people, person, m, man, men, male, w, woman, women, female
+      defaultValue: people
+  - type: input
+    attributes:
+      name: tone
+      label: Tone
+      description: >-
+        Comma separated values to specify skin tones of emoji. Possible values:
+        n, none, l, light, ml, mediumlight, medium-light, m, medium, md,
+        mediumdark, medium-dark, d, dark
+      defaultValue: "none"

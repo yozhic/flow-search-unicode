@@ -1,0 +1,21 @@
+version: 1.0.0.{build}
+image: Visual Studio 2022
+
+environment:
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+
+build_script:
+- ps: dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.SearchUnicode.Identify/Flow.Launcher.Plugin.SearchUnicode.Identify.csproj
+- ps: dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.SearchUnicode.Search/Flow.Launcher.Plugin.SearchUnicode.Search.csproj
+- ps: dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.SearchUnicode.Emoji/Flow.Launcher.Plugin.SearchUnicode.Emoji.csproj
+
+after_build:
+- ps: Compress-Archive -Path "Flow.Launcher.Plugin.SearchUnicode.Identify\bin\Release\win-x64\publish\*" -DestinationPath "Flow.Launcher.Plugin.SearchUnicode.Identify.zip"
+- ps: Compress-Archive -Path "Flow.Launcher.Plugin.SearchUnicode.Search\bin\Release\win-x64\publish\*" -DestinationPath "Flow.Launcher.Plugin.SearchUnicode.Search.zip"
+- ps: Compress-Archive -Path "Flow.Launcher.Plugin.SearchUnicode.Emoji\bin\Release\win-x64\publish\*" -DestinationPath "Flow.Launcher.Plugin.SearchUnicode.Emoji.zip"
+
+artifacts:
+    - path: 'Flow.Launcher.Plugin.SearchUnicode.Identify.zip'
+    - path: 'Flow.Launcher.Plugin.SearchUnicode.Search.zip'
+    - path: 'Flow.Launcher.Plugin.SearchUnicode.Emoji.zip'

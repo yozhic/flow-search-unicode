@@ -1,0 +1,12 @@
+{
+    "ID": "10DB6EB0939443BCA556ACCF93AA98BF",
+    "ActionKeyword": "u",
+    "Name": "Search Unicode – Search",
+    "Description": "Search the entire Unicode character set",
+    "Author": "Eana Hufwe",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "https://github.com/blueset/flow-search-unicode",
+    "IcoPath": "icon.png",
+    "ExecuteFileName": "Flow.Launcher.Plugin.SearchUnicode.Search.dll"
+}

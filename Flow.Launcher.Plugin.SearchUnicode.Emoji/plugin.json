@@ -1,0 +1,12 @@
+{
+    "ID": "BB55C11CB9FB4AAF81B670D9FF0BFBEE",
+    "ActionKeyword": "e",
+    "Name": "Search Unicode – Emoji",
+    "Description": "Search Emoji in the Unicode character set",
+    "Author": "Eana Hufwe",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "https://github.com/blueset/flow-search-unicode",
+    "IcoPath": "icon.png",
+    "ExecuteFileName": "Flow.Launcher.Plugin.SearchUnicode.Emoji.dll"
+}

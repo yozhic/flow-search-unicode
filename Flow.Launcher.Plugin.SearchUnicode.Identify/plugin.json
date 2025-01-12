@@ -1,0 +1,12 @@
+{
+    "ID": "B9EE77F84A9141C3850BB329D45B8D9A",
+    "ActionKeyword": "uid",
+    "Name": "Search Unicode – Identify",
+    "Description": "Identify Unicode properties of any text",
+    "Author": "Eana Hufwe",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "https://github.com/blueset/flow-search-unicode",
+    "IcoPath": "icon.png",
+    "ExecuteFileName": "Flow.Launcher.Plugin.SearchUnicode.Identify.dll"
+}
