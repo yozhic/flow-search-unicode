@@ -17,11 +17,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '7.0.x'
-        
+
     - name: Build and Package
       shell: pwsh
       run: |
-        ./release.ps1
+        .\get-uni.ps1
+        .\release.ps1
         
     - name: Get Version
       id: get_version
