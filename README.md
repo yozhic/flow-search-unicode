@@ -6,13 +6,13 @@ Search Unicode is a set of Flow Launcher plugins to lookup and reverse lookup Un
 
 ## Install
 
-Once the plugins are published to the repository, you can install them directly from Flow Launcher using the `pm install` command.
+You can install them directly from Flow Launcher using the `pm install` command.
 
 ```sh
 pm install search unicode
 ```
 
-Otherwise, you can download the latest release from the [releases page](https://github.com/blueset/flow-search-unicode/releases) and install it manually.
+Alternatively, you can download the latest release from the [releases page](https://github.com/blueset/flow-search-unicode/releases) and install it manually.
 
 Unzip the content of the downloaded file to the Flow Launcher plugin directory at `%appdata%\FlowLauncher\Settings\Plugins\`, then restart your Flow Launcher.
 
