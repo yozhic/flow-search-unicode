@@ -19,10 +19,11 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Emoji
 
         private (string stdout, string stderr) ExecuteUni(string action, IEnumerable<string> query)
         {
-
             var startInfo = new System.Diagnostics.ProcessStartInfo
             {
-                FileName = "uni.exe",
+                FileName = System.IO.Path.Combine(
+                    System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                    "uni.exe"),
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
