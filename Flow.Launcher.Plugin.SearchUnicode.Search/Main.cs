@@ -109,7 +109,7 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Search
                 Title = $"{c.Char} — {c.Name}",
                 SubTitle = $"{c.Codepoint} ({c.Decimal}) {c.Block} ({c.Category})",
                 ActionKeywordAssigned = "u",
-                CopyText = c.Char[^1..],
+                CopyText = Char.ConvertFromUtf32(int.Parse(c.Decimal)).ToString(),
                 Glyph = new GlyphInfo("sans-serif", c.Char),
                 ContextData = c,
                 Action = _ =>
@@ -173,11 +173,12 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Search
                 {
                     Title = "Character",
                     SubTitle = charInfo.Char,
+                    CopyText = Char.ConvertFromUtf32(int.Parse(charInfo.Decimal)).ToString(),
                     ActionKeywordAssigned = "u",
                     Glyph = new GlyphInfo("sans-serif", charInfo.Char),
                     Action = _ =>
                     {
-                        System.Windows.Clipboard.SetText(charInfo.Char[^1..]);
+                        System.Windows.Clipboard.SetText(Char.ConvertFromUtf32(int.Parse(charInfo.Decimal)).ToString());
                         return true;
                     }
                 },
