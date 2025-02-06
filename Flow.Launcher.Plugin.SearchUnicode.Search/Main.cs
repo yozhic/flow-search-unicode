@@ -114,7 +114,7 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Search
                 ContextData = c,
                 Action = _ =>
                 {
-                    System.Windows.Clipboard.SetText(c.Char);
+                    System.Windows.Clipboard.SetText(Char.ConvertFromUtf32(int.Parse(c.Decimal)).ToString());
                     return true;
                 }
             }).ToList();

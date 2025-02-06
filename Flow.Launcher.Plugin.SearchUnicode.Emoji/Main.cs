@@ -231,7 +231,7 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Emoji
         
         public Control CreateSettingPanel()
         {
-            return new SettingsControl(_context.API.LoadSettingJsonStorage<Settings>());
+            return new SettingsControl(_context);
         }
     }
     public class EmojiInfo

@@ -10,11 +10,13 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Emoji
     /// </summary>
     public partial class SettingsControl : UserControl
     {
-        private readonly Settings _settings;
+        private Settings _settings;
+        private readonly PluginInitContext _context;
 
-        public SettingsControl(Settings settings)
+        public SettingsControl(PluginInitContext context)
         {
-            _settings = settings;
+            _context = context;
+            _settings = context.API.LoadSettingJsonStorage<Settings>();
 
             InitializeComponent();
 
@@ -27,13 +29,16 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Emoji
 
         private void GenderTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            _settings = _context.API.LoadSettingJsonStorage<Settings>();
             _settings.Gender = GenderTextBox.Text;
-
+            _context.API.SaveSettingJsonStorage<Settings>();
         }
 
         private void ToneTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            _settings = _context.API.LoadSettingJsonStorage<Settings>();
             _settings.Tone = ToneTextBox.Text;
+            _context.API.SaveSettingJsonStorage<Settings>();
         }
 
     }
