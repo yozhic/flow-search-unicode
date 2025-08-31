@@ -262,7 +262,7 @@ namespace Flow.Launcher.Plugin.SearchUnicode.Emoji
                 get
                 {
                     var codepoint = Codepoint.Replace("U+", "").Replace(" ", "-").ToLower();
-                    return $"https://registry.npmmirror.com/@lobehub/fluent-emoji-3d/1.1.0/files/assets/{codepoint}.webp";
+                    return $"assets\\{codepoint}.webp";
                 }
             }
         }
