@@ -1,10 +1,7 @@
 name: Publish Release
 
 on:
-  push:
-    paths:
-      - 'Flow.Launcher.Plugin.SearchUnicode.*/plugin.json'
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build:
